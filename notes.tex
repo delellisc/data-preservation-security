@@ -1,0 +1,283 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+% quotes
+\usepackage{dirtytalk}
+
+% code blocks
+% \usepackage{minted}
+\usepackage[outputdir=build, cachedir=build/_minted-notes]{minted}
+
+% embedd links
+\usepackage{hyperref}
+
+\title{Lectures Notes on Data Preservation and Security}
+\author{Camilo de Lellis}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\section{Aula - 09/09/2025}
+Conteúdos ministrados: Apresentação da Disciplina | Fundamentos de Segurança
+% \subsection{Apresentação da Disciplina | Fundamentos de Segurança}
+
+\subsection{Ementa da Disciplina}
+\textbf{Curso:} Curso Superior de Tecnologia em Sistemas para Internet
+\textbf{Disciplina:} Segurança e Preservação de Dados \textbf{Carga-Horária:} 60h (80h/a)
+\textbf{Pré-Requisito(s):} Aplicações de Redes de Computadores  \textbf{Número de créditos:} 4
+
+\begin{center}
+EMENTA
+\end{center}
+Visão geral da segurança da informação; incidentes de segurança (ataques); criptografia e
+esteganografia; segurança em ambientes de rede; análise de vulnerabilidades de segurança;
+computação forense; políticas de segurança da informação.
+
+\begin{center}
+PROGRAMA
+\end{center}
+
+\begin{center}
+Objetivos
+\end{center}
+Conhecer os principais conceitos e terminologia da área de segurança da informação;
+\begin{itemize}
+      \item Conhecer e aprender a utilizar técnicas de criptografia e esteganografia;
+      \item Aprender a identificar e responder aos principais incidentes de segurança (ataques) a sistemas computacionais;
+      \item Aprender a identificar e corrigir as principais vulnerabilidades de segurança em sistemas computacionais;
+      \item Conhecer e exercitar a configuração de ativos de redes de computadores relacionados a segurança da informação;
+      \item Conhecer e praticar técnicas de segurança em redes de computadores;
+      \item Conhecer técnicas e ferramentas comumente utilizadas no ataque e defesa de sistemas de informação;
+      \item Conhecer e praticar técnicas e ferramentas de computação forense;
+      \item Conhecer normas e critérios para implementação de políticas segurança da informação.
+\end{itemize}
+
+\begin{center}
+Bases Científico-Tecnológicas (Conteúdos)
+\end{center}
+
+\begin{itemize}
+      \item 1. Visão geral da segurança da informação
+      \begin{itemize} 
+            \item 1.1. Contextualização, principais conceitos e terminologia;
+            \item 1.2. Princípios básicos da segurança da informação;
+            \item 1.3. As 5 dimensões da segurança;
+            \item 1.4. Novos princípios/objetivos da segurança da informação.
+      \end{itemize}
+      \item 2. Incidentes de Segurança (Ataques)
+      \begin{itemize} 
+            \item 2.1. Ameaças x Vulnerabilidades x Riscos;
+            \item 2.2. Principais tipos de ataques;
+            \item 2.3. Identificação, combate e resposta a incidentes.
+      \end{itemize}
+      \item 3. Criptografia e Esteganografia
+      \begin{itemize} 
+            \item 3.1. Criptografia: Visão geral;
+            \item 3.2. Criptografia simétrica e assimétrica;
+            \item 3.3. Funções hash;
+            \item 3.4. Criptografia em serviços de rede;
+            \item 3.5. Esteganografia.
+      \end{itemize}
+      \item 4. Segurança em Ambientes de Rede
+      \begin{itemize} 
+            \item 4.1. Firewalls;
+            \item 4.2. Sistemas de detecção de intrusões (IDS);
+            \item 4.3. Redes privadas virtuais (VPNs).
+      \end{itemize}
+      \item 5. Análise de Vulnerabilidades de Segurança
+      \begin{itemize} 
+            \item 5.1. Vulnerabilidades em sistemas computacionais e serviços;
+            \item 5.2. Testes de intrusão (pentests).
+      \end{itemize}
+      \item 6. Computação Forense
+      \begin{itemize} 
+            \item 6.1. Introdução à análise forense computacional;
+            \item 6.2. Técnicas de recuperação de dados;
+            \item 6.3. Introdução à análise forense em redes.
+      \end{itemize}
+      \item 7. Políticas de Segurança da Informação
+      \begin{itemize} 
+            \item 7.1. Principais normas de segurança da informação;
+            \item 7.2. Implementação de uma política de segurança.
+      \end{itemize}
+\end{itemize}
+
+\begin{center}
+Procedimentos Metodológicos
+\end{center}
+Aulas teóricas expositivas; aulas práticas em laboratório; desenvolvimento de projetos; leitura de
+textos, palestras, seminários, visitas técnicas, pesquisas bibliográficas.
+
+\begin{center}
+Recursos Didáticos
+\end{center}
+Quadro branco, computador, projetor multimídia e vídeos.
+
+\begin{center}
+Avaliação
+\end{center}
+Avaliações escritas e práticas; trabalhos individuais e em grupo (listas de exercícios, estudos dirigidos,
+pesquisas); apresentação dos projetos desenvolvidos.
+
+\begin{center}
+Bibliografia Básica
+\end{center}
+\begin{itemize}
+      \item 1. NAKAMURA, Emilio Tissato; GEUS, Paulo Lício de. Segurança de redes em ambientes cooperativos. São Paulo: Novatec, 2007. 482 p. il.
+      \item 2. STALLINGS, William; BROWN, Lawrie. Segurança de computadores: princípios e práticas. 2. ed. Rio de Janeiro: Elsevier, 2014. 726 p. il.
+      \item 3. STALLINGS, William; VIEIRA, Daniel. Criptografia e segurança de redes: princípios e práticas. 4. ed. São Paulo: Pearson Prentice Hall, 2010. 492 p. il. Bibliografia Complementar
+\end{itemize}
+
+\begin{center}
+Bibliografia Complementar
+\end{center}
+\begin{itemize}
+      \item 1. FARMER, Dan; VENEMA, Wietse. Perícia forense computacional: teoria e prática aplicada: como investigar e esclarecer ocorrências no mundo cibernético. São Paulo: Pearson Prentice Hall, 2007.
+      \item 2. TANENBAUM, Andrew S. et al. Redes de computadores. 5. ed. São Paulo: Pearson Prentice Hall, 2011. 582 p. il.
+      \item 3. BEAL, Adriana. Segurança da informação: princípios e melhores práticas para proteção dos ativos de informação nas organizações. São Paulo: Atlas, 2005.
+      \item 4. GUIMARÃES, Alexandre Guedes; LINS, Rafael Dueire; OLIVEIRA, Raimundo Corrêa. Segurança com redes privadas virtuais – VPNs. Rio de Janeiro: Brasport, 2006.
+      \item 5. KIZZA, Joseph Migga. Computer network security and cyber ethics. 2nd ed. Jefferson: McFarland and Company, 2006.      
+\end{itemize}
+
+\begin{center}
+Software(s) de Apoio:
+\end{center}
+\begin{itemize}
+      \item Sistemas operacionais Linux e Windows;
+      \item Ferramentas específicas para exercícios e testes de segurança em sistemas computacionais.
+\end{itemize}
+
+\section{Aula - 15/09/2025}
+Conteúdos ministrados: Fundamentos de Segurança
+\subsection{Fundamentos de Segurança}
+
+\section{Aula - 16/09/2025}
+Conteúdos ministrados: Incidentes de Segurança
+\subsection{Incidentes de Segurança}
+
+\section{Aula - 22/09/2025}
+Conteúdos ministrados: Incidentes de Segurança
+\subsection{Incidentes de Segurança}
+
+\section{Aula - 23/09/2025}
+Conteúdos ministrados: Práticas de Fixação: Incidentes de Segurança (Footprinting + Portscan)
+\subsection{Práticas de Fixação: Incidentes de Segurança (Footprinting + Portscan)}
+
+\section{Aula - 29/09/2025}
+Conteúdos ministrados: Incidentes de Segurança
+\subsection{Incidentes de Segurança}
+
+\section{Aula - 30/09/2025}
+Conteúdos ministrados: Práticas de Fixação: Incidentes de Segurança (Scanning)
+\subsection{Práticas de Fixação: Incidentes de Segurança (Scanning)}
+
+\section{Aula - 06/10/2025}
+Conteúdos ministrados: Incidentes de Segurança
+\subsection{Incidentes de Segurança}
+
+\section{Aula - 07/10/2025}
+Conteúdos ministrados: 1a Avaliação do 1o Bimestre
+\subsection{1a Avaliação do 1o Bimestre}
+
+\section{Aula - 13/10/2025}
+Conteúdos ministrados: Criptografia e Esteganografia
+\subsection{Criptografia e Esteganografia}
+
+\section{Aula - 14/10/2025}
+Conteúdos ministrados: Criptografia e Esteganografia
+\subsection{Criptografia e Esteganografia}
+
+\section{Aula - 20/10/2025}
+Conteúdos ministrados: Esteganografia
+\subsection{Introduction to Steganography}
+A lot of people know cryptography even when they never implemented it in their life. Steganography, however, is much less common to the popular knowledge. \href{https://en.wikipedia.org/wiki/Steganography}{Steganography} consists in occulting a message into diverse media formats.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\linewidth]{./images/outguess-compare.jpg}
+\caption{\label{fig:steganography-example}An example of steganography. Data embedded into an image.}
+\end{figure}
+
+The historical context to steganography dates to the communications of old age emperors. Examples brought by the professor are:
+\begin{itemize}
+      \item 480 BC Greece x Persia
+      \item \href{https://en.wikipedia.org/wiki/Histiaeus}{Histiaeus} communicating through bald heads
+      \item Chinese wax ball
+      \item Invisible ink
+      \item Boiled egg message
+\end{itemize}
+
+Steganography starts being used in computers when people realized that file formats such as images took a big amount of bits. There was, then, a big opportunity to hid messages in between the data. First this knowledge was used to compress images. That was done by removing the least significant bits from a file. They then realized that we could take this gap created by removing those bits to insert news information. We could then insert messages inside images. We then took notice that another kind of files could be to store those messages. We could then store messages inside sound files. With the advance of tech and the tools for steganography, we can now basically store anything inside anything. For example, we could take an audio and record then into image files or store image into sound.
+
+Some of the tools used for steganography are:
+\begin{itemize}
+      \item \href{https://steghide.sourceforge.net/}{Steghide}
+      \item \href{http://camouflage.unfiction.com/}{Camouflage(?)}
+      \item \href{https://www.cs.vu.nl/~ast/books/mos2/zebras.html}{S-tools}
+      \item \href{https://www.east-tec.com/invisiblesecrets/}{Invisible Secrets}
+      \item \href{https://darkside.com.au/gifshuffle/}{Gifshuf}
+      \item \href{https://trove.cyberskyline.com/38ce8b2db6a24bb49615382e2a252085}{Hideseek}
+      \item \href{https://ieeexplore.ieee.org/document/10031438}{Gifclean (not found)}
+      \item \href{https://sourceforge.net/projects/hide-in-picture/}{HIP (Hide in Picture)}
+\end{itemize}
+
+\begin{minted}{bash}
+      aluno@controlplane:~/docker-rk$ wget http://10.49.10.70/cripto01/docker-compose.yml
+      --2025-10-20 13:54:48--  http://10.49.10.70/cripto01/docker-compose.yml
+      Conectando-se a 10.49.10.70:80... conectado.
+      A requisição HTTP foi enviada, aguardando resposta... 200 OK
+      Tamanho: 262
+      Salvando em: “docker-compose.yml”
+
+      docker-compose.yml    100%[======================>]     262  --.-KB/s    em 0s      
+
+      2025-10-20 13:54:48 (33,3 MB/s) - “docker-compose.yml” salvo [262/262]
+
+      aluno@controlplane:~/docker-rk$ ls
+      docker-compose.yml
+      aluno@controlplane:~/docker-rk$ docker compose up
+\end{minted}
+
+After running the container, just access \href{http://localhost:10001/acesso.html}{localhost:10001/acesso.html} with a password of \textbf{password}
+
+To extract the image, just run:
+
+\begin{minted}{bash}
+      steghide extract -sf rk_01.jpg
+\end{minted}
+
+The passphrase is "agua". The professor hid an image inside another.
+
+To suspect if an image is an object to steganography, there is an area in the field of security called \href{https://en.wikipedia.org/wiki/Steganalysis}{steganalysis}. You can use image editors to search for filters inside an image file and see where is there a "shadow" inside an image.
+
+Bin Laden was a great user of such techniques. The professor just gave an example of hiding images inside a gigantic amount of pornography. Even images without steganography are big. Higher resolution 
+
+Stegcracker is a brute force tool that can crack the password of steganography applied into a image. An example of such tool being used:
+
+\begin{minted}{bash}
+      stegcracker camilo.jpg senhas
+\end{minted}
+
+To see if an image is not compromised, we can check it's hash to see if it is like the original:
+\begin{minted}{bash}
+      md5sum camilo.jpg
+\end{minted}
+      
+\bibliographystyle{alpha}
+\bibliography{sample}
+
+\end{document}

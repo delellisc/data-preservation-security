@@ -1,0 +1,12 @@
+services:
+  cripto01:
+      container_name: cripto01
+      restart: always
+      image: ricardokleber/rk_debian12_vnc:latest
+      hostname: cripto01
+      ports:
+        - ${BIND:-0.0.0.0:10001}:6080
+      volumes:
+        - data:/home/user
+volumes:
+  data: {}
