@@ -31,8 +31,8 @@
 
 \tableofcontents
 
-\section{Aula - 09/09/2025}
-Conteúdos ministrados: Apresentação da Disciplina | Fundamentos de Segurança
+\section{Lecture - 09/09/2025}
+Content taught: Apresentação da Disciplina | Fundamentos de Segurança
 % \subsection{Apresentação da Disciplina | Fundamentos de Segurança}
 
 \subsection{Ementa da Disciplina}
@@ -161,48 +161,48 @@ Software(s) de Apoio:
       \item Ferramentas específicas para exercícios e testes de segurança em sistemas computacionais.
 \end{itemize}
 
-\section{Aula - 15/09/2025}
-Conteúdos ministrados: Fundamentos de Segurança
+\section{Lecture - 15/09/2025}
+Content taught: Fundamentos de Segurança
 \subsection{Fundamentos de Segurança}
 
-\section{Aula - 16/09/2025}
-Conteúdos ministrados: Incidentes de Segurança
+\section{Lecture - 16/09/2025}
+Content taught: Incidentes de Segurança
 \subsection{Incidentes de Segurança}
 
-\section{Aula - 22/09/2025}
-Conteúdos ministrados: Incidentes de Segurança
+\section{Lecture - 22/09/2025}
+Content taught: Incidentes de Segurança
 \subsection{Incidentes de Segurança}
 
-\section{Aula - 23/09/2025}
-Conteúdos ministrados: Práticas de Fixação: Incidentes de Segurança (Footprinting + Portscan)
+\section{Lecture - 23/09/2025}
+Content taught: Práticas de Fixação: Incidentes de Segurança (Footprinting + Portscan)
 \subsection{Práticas de Fixação: Incidentes de Segurança (Footprinting + Portscan)}
 
-\section{Aula - 29/09/2025}
-Conteúdos ministrados: Incidentes de Segurança
+\section{Lecture - 29/09/2025}
+Content taught: Incidentes de Segurança
 \subsection{Incidentes de Segurança}
 
-\section{Aula - 30/09/2025}
-Conteúdos ministrados: Práticas de Fixação: Incidentes de Segurança (Scanning)
+\section{Lecture - 30/09/2025}
+Content taught: Práticas de Fixação: Incidentes de Segurança (Scanning)
 \subsection{Práticas de Fixação: Incidentes de Segurança (Scanning)}
 
-\section{Aula - 06/10/2025}
-Conteúdos ministrados: Incidentes de Segurança
+\section{Lecture - 06/10/2025}
+Content taught: Incidentes de Segurança
 \subsection{Incidentes de Segurança}
 
-\section{Aula - 07/10/2025}
-Conteúdos ministrados: 1a Avaliação do 1o Bimestre
+\section{Lecture - 07/10/2025}
+Content taught: 1a Avaliação do 1o Bimestre
 \subsection{1a Avaliação do 1o Bimestre}
 
-\section{Aula - 13/10/2025}
-Conteúdos ministrados: Criptografia e Esteganografia
+\section{Lecture - 13/10/2025}
+Content taught: Criptografia e Esteganografia
 \subsection{Criptografia e Esteganografia}
 
-\section{Aula - 14/10/2025}
-Conteúdos ministrados: Criptografia e Esteganografia
+\section{Lecture - 14/10/2025}
+Content taught: Criptografia e Esteganografia
 \subsection{Criptografia e Esteganografia}
 
-\section{Aula - 20/10/2025}
-Conteúdos ministrados: Esteganografia
+\section{Lecture - 20/10/2025}
+Content taught: Esteganografia
 \subsection{Introduction to Steganography}
 A lot of people know cryptography even when they never implemented it in their life. Steganography, however, is much less common to the popular knowledge. \href{https://en.wikipedia.org/wiki/Steganography}{Steganography} consists in occulting a message into diverse media formats.
 
@@ -235,21 +235,16 @@ Some of the tools used for steganography are:
       \item \href{https://sourceforge.net/projects/hide-in-picture/}{HIP (Hide in Picture)}
 \end{itemize}
 
+For the practice example we did in class, we first had to download a \textbf{docker-compose.yml}:
+
 \begin{minted}{bash}
-      aluno@controlplane:~/docker-rk$ wget http://10.49.10.70/cripto01/docker-compose.yml
-      --2025-10-20 13:54:48--  http://10.49.10.70/cripto01/docker-compose.yml
-      Conectando-se a 10.49.10.70:80... conectado.
-      A requisição HTTP foi enviada, aguardando resposta... 200 OK
-      Tamanho: 262
-      Salvando em: “docker-compose.yml”
+      wget http://10.49.10.70/cripto01/docker-compose.yml
+\end{minted}
 
-      docker-compose.yml    100%[======================>]     262  --.-KB/s    em 0s      
+TO-DO: Later, I'll share the content of the \textbf{.yml} here. To run it, just execute the following command:
 
-      2025-10-20 13:54:48 (33,3 MB/s) - “docker-compose.yml” salvo [262/262]
-
-      aluno@controlplane:~/docker-rk$ ls
-      docker-compose.yml
-      aluno@controlplane:~/docker-rk$ docker compose up
+\begin{minted}{bash}
+      docker compose up
 \end{minted}
 
 After running the container, just access \href{http://localhost:10001/acesso.html}{localhost:10001/acesso.html} with a password of \textbf{password}
@@ -276,7 +271,142 @@ To see if an image is not compromised, we can check it's hash to see if it is li
 \begin{minted}{bash}
       md5sum camilo.jpg
 \end{minted}
-      
+
+\section{Lecture - 21/10/2025}
+Content taught: Asymmetric Cryptography
+
+\subsection{Asymmetric Cryptography}
+\href{https://en.wikipedia.org/wiki/Public-key_cryptography}{Asymmetric cryptography} consists of using a pair of keys when encrypting and decrypting data.
+
+Installing \textbf{gpg}:
+
+\begin{minted}{bash}
+      # being sudo
+      apt update && apt install gnupg
+\end{minted}
+
+I send someone my public key, they send me and I decrypt it with my private key. To make sure that someone sent someone, they need to sign someone with their private key, and with their public key, through a keychain, they can be sure that someone encrypted it. \href{https://keys.openpgp.org/}{keys.openpgp.org} is a public keychain. This website generate public keys that can be used by everyone. You cannot have two certificates in the same keychain using the same e-mail.
+
+The first step is to add the keyserver to our gnupg installation:
+
+\begin{minted}{bash}
+      mkdir ~/.gnupg
+      touch ~/.gnupg/gpg.conf
+      vim ~/.gnupg/gpg.conf
+\end{minted}
+
+Inside the file, write the following:
+
+\begin{minted}{bash}
+      keyserver hkps://keys.openpgp.org
+\end{minted}
+
+The difference between a remote to a local keychain is that the local keychain only has keys I used before, not the ones I did never use.
+
+To encrypt data asymmetrically:
+
+\begin{minted}{bash}
+      gpg --full-generate-key
+\end{minted}
+
+Expected output:
+
+% \begin{minted}{bash}
+% user@cripto01:-$ gpg-full-generate-key
+% gpg: WARNING: unsafe permissions on homedir '/home/user/.gnupg' gpg (GnuPG) 2.2.40; Соруyright (C) 2022 % g10 Code GmbH This is free software: you are free to change and redistribute it.
+% There is NO WARRANTY, to the extent permitted by law.
+% gpg: keybox '/home/user/.gnupg/pubring.kbx' created
+% Please select what kind of key you want:
+% (1) RSA and RSA (default)
+% (2) DSA and Elgamal
+% (3) DSA (sign only)
+% (4) RSA (sign only)
+% (14) Existing key from card
+% Your selection? 1
+% RSA keys may be between 1024 and 4096 bits long.
+% What keysize do you want? (3072) 4096
+% Requested keysize is 4096 bits
+% Please specify how long the key should be valid.
+% 0 key does not expire
+% <U> = key expires in n days
+% <n>w = key expires in n weeks
+% <n>m key expires in n months
+% <n>y = key expires in n years
+% Key is valid for? (0) ly
+% Key expires at Wed Oct 21 13:59:49 2026-03
+% Is this correct? (y/N) у
+% 
+% Real name: Camilo de Lellis de Medeiros Santos
+% Email address: lellis.m@escolar.ifrn.edu.br
+% Comment: Internacional
+% You selected this USER-ID:
+% "Camilo de Lellis de Medeiros Santos (Internacional) <lellis.m@escolar.ifrn.
+% edu.br>"
+% Change (N)ame, (C)omment, (E)mail or (0) kay/(Q)uit? 0
+% We need to generate a lot of random bytes. It is a good idea to perform some other action (type on the % keyboard, move the mouse, utilize the disks) during the prime generation; this gives the random number % generator a better chance to gain enough entropy. We need to generate a lot of random bytes. It is a good % idea to perform some other action (type on the keyboard, move the mouse, utilize the disks) during the % prime generation; this gives the random number generator a better chance to gain enough entropy.
+% gpg: /home/user/.gnupg/trustdb.gpg: trustdb created
+% gpg: directory '/home/user/.gnupg/openpgp-revocs.d' created
+% gpg: revocation certificate stored as '/home/user/.gnupg/openpgp-revocs.d/415223 % 811ABA4D6E5A15C5B60FD31B57D05B9E66.rev'
+% public and secret key created and signed.
+% pub rsa4096 2025-10-21 [SC] [expires: 2026-10-21]
+% 415223811ABA4D6E5A15C5B60FD31B57D05B9E66
+% uid
+% Camilo de Lellis de Medeiros Santos (Internacional) <le
+% llis.m@escolar.ifrn.edu.br>
+% sub rsa4096 2025-10-21 [E] [expires: 2026-10-21]
+% user@cripto01:~$
+% \end{minted}
+
+If some problem arises when you set your key to never expire, you can revoke your key.
+
+To see if the keys was really created, you just need to take a look at the \textbf{~/.gnupg}
+
+\begin{minted}{bash}
+      $ ls ~/.gnupg/
+      S.gpg-agent
+      S.gpg-agent.ssh
+      S.gpg-agent.browser
+      gpg.conf
+      S.gpg-agent.extra
+      openpgp-revocs.d
+      private-keys-vl.d
+      trustdb.gpg
+      pubring.kbx
+      pubring.kbx-
+\end{minted}
+
+To see the keys:
+
+% \begin{minted}{bash}
+%       user@cripto01:~$ gpg-list-keys
+%       gpg: WARNING: unsafe permissions on homedir '/home/user/.gnupg'
+%       gpg: checking the trustdb
+%       gpg: marginals needed: 3 completes needed: 1 trust model: pgp
+%       gpg: depth: 0 valid: 1 signed: 0 trust: 0, θα, θη, 0m, of, lu
+%       gpg: next trustdb check due at 2026-10-21
+%       /home/user/.gnupg/pubring.kbx
+%       pub rsa4096 2025-10-21 [SC] [expires: 2026-10-21]
+%       415223811ABA4D6E5A15C5B60FD31B57D05B9E66
+%       uid [ultimate] Camilo de Lellis de Medeiros Santos (Internacional) <lellis.m@escolar.ifrn.edu.br>
+%       sub rsa4096 2025-10-21 [E] [expires: 2026-10-21]
+%       user@cripto01:~$ gpg-list-keys-keyid-format=long
+%       gpg: WARNING: unsafe permissions on homedir '/home/user/.gnupg'
+%       /home/user/.gnupg/pubring.kbx
+%       pub rsa4096/0FD31B57D05B9E66 2025-10-21 [SC] [expires: 2026-10-21]
+%       415223811ABA4D6E5A15C5B60FD31B57D05B9E66
+%       uid
+%       [ultimate] Camilo de Lellis de Medeiros Santos (Internacional) <lellis.m@escolar.ifrn.edu.br>
+%       sub rsa4096/43D0DC0513759FC7 2025-10-21 [E] [expires: 2026-10-21]
+% \end{minted}
+
+To export your key as text to later upload to the public keychain:
+
+\begin{minted}{bash}
+      gpg --export --armor lellis.m@escolar.ifrn.edu.br > minha_chave.asc
+\end{minted}
+
+Then we can go to \href{https://keys.openpgp.org/}{openpgp} and upload our key.
+
 \bibliographystyle{alpha}
 \bibliography{sample}
 
