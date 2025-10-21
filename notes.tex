@@ -311,6 +311,7 @@ To encrypt data asymmetrically:
 
 Expected output:
 
+% TO-DO: Need to review code blocks with command outputs
 % \begin{minted}{bash}
 % user@cripto01:-$ gpg-full-generate-key
 % gpg: WARNING: unsafe permissions on homedir '/home/user/.gnupg' gpg (GnuPG) 2.2.40; Соруyright (C) 2022 % g10 Code GmbH This is free software: you are free to change and redistribute it.
@@ -375,8 +376,9 @@ To see if the keys was really created, you just need to take a look at the \text
       pubring.kbx-
 \end{minted}
 
-To see the keys:
+To see the keys: 
 
+% TO-DO: Need to review code blocks with command outputs
 % \begin{minted}{bash}
 %       user@cripto01:~$ gpg-list-keys
 %       gpg: WARNING: unsafe permissions on homedir '/home/user/.gnupg'
@@ -405,6 +407,7 @@ To export your key as text to later upload to the public keychain:
       gpg --export --armor lellis.m@escolar.ifrn.edu.br > minha_chave.asc
 \end{minted}
 
+% TO-DO: Add the last part of the script to this document
 Then we can go to \href{https://keys.openpgp.org/}{openpgp} and upload our key.
 
 \bibliographystyle{alpha}
