@@ -410,6 +410,21 @@ To export your key as text to later upload to the public keychain:
 % TO-DO: Add the last part of the script to this document
 Then we can go to \href{https://keys.openpgp.org/}{openpgp} and upload our key.
 
+\section{Lecture - 03/11/2025}
+Content taught: review for practical exam. We took a look into some new commands.
+
+% Commands that we used this lecture:
+% gpg--search-keys "lellis.m@escolar.ifrn.edu.br"
+% gpg --encrypt --recipient <email> <arquivo>
+% gpg --encrypt -a --recipient <email> <arquivo>
+% gpg -s --recipient <email> <arquivo>
+% gpg --verify <arquivo>
+% gpg -e -a -s --recipient <email> <arquivo>
+% md5sum *
+% sha256sum *
+% sha512sum *
+% sha256sum * | grep <hash> | cut -d" -f3
+
 \bibliographystyle{alpha}
 \bibliography{sample}
 
