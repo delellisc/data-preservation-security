@@ -366,7 +366,7 @@ Stegcracker is a brute force tool that can crack the password of
 steganography applied into a image. An example of such tool being used:
 
 ``` bash
-      stegcracker camilo.jpg senhas
+stegcracker camilo.jpg senhas
 ```
 
 To see if an image is not compromised, we can check it’s hash to see if
@@ -433,17 +433,17 @@ To see if the keys was really created, you just need to take a look at
 the ** /.gnupg**
 
 ``` bash
-      $ ls ~/.gnupg/
-      S.gpg-agent
-      S.gpg-agent.ssh
-      S.gpg-agent.browser
-      gpg.conf
-      S.gpg-agent.extra
-      openpgp-revocs.d
-      private-keys-vl.d
-      trustdb.gpg
-      pubring.kbx
-      pubring.kbx-
+$ ls ~/.gnupg/
+S.gpg-agent
+S.gpg-agent.ssh
+S.gpg-agent.browser
+gpg.conf
+S.gpg-agent.extra
+openpgp-revocs.d
+private-keys-vl.d
+trustdb.gpg
+pubring.kbx
+pubring.kbx-
 ```
 
 To see the keys:

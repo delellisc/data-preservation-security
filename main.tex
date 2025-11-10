@@ -264,13 +264,17 @@ Bin Laden was a great user of such techniques. The professor just gave an exampl
 Stegcracker is a brute force tool that can crack the password of steganography applied into a image. An example of such tool being used:
 
 \begin{minted}{bash}
-      stegcracker camilo.jpg senhas
+stegcracker camilo.jpg senhas
 \end{minted}
 
 To see if an image is not compromised, we can check it's hash to see if it is like the original:
 \begin{minted}{bash}
 md5sum camilo.jpg
 \end{minted}
+
+% steghide embed -cf cachorro.png -ef galinhachorro.jpg -p agua
+
+% -----|-----|-----|-----|-----|-----|-----|-----|-----|-----
 
 \section{Lecture - 21/10/2025}
 Content taught: Asymmetric Cryptography
@@ -363,17 +367,17 @@ If some problem arises when you set your key to never expire, you can revoke you
 To see if the keys was really created, you just need to take a look at the \textbf{~/.gnupg}
 
 \begin{minted}{bash}
-      $ ls ~/.gnupg/
-      S.gpg-agent
-      S.gpg-agent.ssh
-      S.gpg-agent.browser
-      gpg.conf
-      S.gpg-agent.extra
-      openpgp-revocs.d
-      private-keys-vl.d
-      trustdb.gpg
-      pubring.kbx
-      pubring.kbx-
+$ ls ~/.gnupg/
+S.gpg-agent
+S.gpg-agent.ssh
+S.gpg-agent.browser
+gpg.conf
+S.gpg-agent.extra
+openpgp-revocs.d
+private-keys-vl.d
+trustdb.gpg
+pubring.kbx
+pubring.kbx-
 \end{minted}
 
 To see the keys: 
@@ -410,11 +414,13 @@ gpg --export --armor lellis.m@escolar.ifrn.edu.br > minha_chave.asc
 % TO-DO: Add the last part of the script to this document
 Then we can go to \href{https://keys.openpgp.org/}{openpgp} and upload our key.
 
+% -----|-----|-----|-----|-----|-----|-----|-----|-----|-----
+
 \section{Lecture - 03/11/2025}
 Content taught: review for practical exam. We took a look into some new commands.
 
 % Commands that we used this lecture:
-% gpg--search-keys "lellis.m@escolar.ifrn.edu.br"
+% gpg --search-keys "lellis.m@escolar.ifrn.edu.br"
 % gpg --encrypt --recipient <email> <arquivo>
 % gpg --encrypt -a --recipient <email> <arquivo>
 % gpg -s --recipient <email> <arquivo>
@@ -424,6 +430,17 @@ Content taught: review for practical exam. We took a look into some new commands
 % sha256sum *
 % sha512sum *
 % sha256sum * | grep <hash> | cut -d" -f3
+
+% de-lellis@DESKTOP-G4N0RK4:~/projects/c-cpp/security$ md5sum imagens-steghide/galinhachorro.jpg 
+% 036453f0615baef9fe70df57309ef4fd  imagens-steghide/galinhachorro.jpg
+% de-lellis@DESKTOP-G4N0RK4:~/projects/c-cpp/security$ md5sum imagens-hidden/galinhachorro.jpg 
+% 036453f0615baef9fe70df57309ef4fd  imagens-hidden/galinhachorro.jpg
+% de-lellis@DESKTOP-G4N0RK4:~/projects/c-cpp/security$ md5sum imagens-steghide/cachorro.jpg
+% 702f35570740b644eb3f3311d8e4098f  imagens-steghide/cachorro.jpg
+% de-lellis@DESKTOP-G4N0RK4:~/projects/c-cpp/security$ md5sum imagens-hidden/cachorro.
+% cachorro.jpg                  cachorro.jpg:Zone.Identifier  cachorro.png                  
+% de-lellis@DESKTOP-G4N0RK4:~/projects/c-cpp/security$ md5sum imagens-hidden/cachorro.jpg
+% 8f3ff94293d5accad5050f0bbb140d1d  imagens-hidden/cachorro.jpg
 
 % -----------------------------------------------------------
 % -----|-----|-----|-----|-----|-----|-----|-----|-----|-----
