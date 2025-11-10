@@ -425,6 +425,17 @@ Content taught: review for practical exam. We took a look into some new commands
 % sha512sum *
 % sha256sum * | grep <hash> | cut -d" -f3
 
+% -----------------------------------------------------------
+% -----|-----|-----|-----|-----|-----|-----|-----|-----|-----
+% -----------------------------------------------------------
+
+\section{\LaTeX}
+I shall take notes with \LaTeX and then convert them to Markdown. To convert it into my README.md, I’ll just use the following:
+
+\begin{minted}{bash}
+pandoc main.tex -o README.md --from=latex --to=gfm
+\end{minted}
+
 \bibliographystyle{alpha}
 \bibliography{sample}
 
