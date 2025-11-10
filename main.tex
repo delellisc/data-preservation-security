@@ -238,13 +238,13 @@ Some of the tools used for steganography are:
 For the practice example we did in class, we first had to download a \textbf{docker-compose.yml}:
 
 \begin{minted}{bash}
-      wget http://10.49.10.70/cripto01/docker-compose.yml
+wget http://10.49.10.70/cripto01/docker-compose.yml
 \end{minted}
 
 TO-DO: Later, I'll share the content of the \textbf{.yml} here. To run it, just execute the following command:
 
 \begin{minted}{bash}
-      docker compose up
+docker compose up
 \end{minted}
 
 After running the container, just access \href{http://localhost:10001/acesso.html}{localhost:10001/acesso.html} with a password of \textbf{password}
@@ -252,7 +252,7 @@ After running the container, just access \href{http://localhost:10001/acesso.htm
 To extract the image, just run:
 
 \begin{minted}{bash}
-      steghide extract -sf rk_01.jpg
+steghide extract -sf rk_01.jpg
 \end{minted}
 
 The passphrase is "agua". The professor hid an image inside another.
@@ -269,7 +269,7 @@ Stegcracker is a brute force tool that can crack the password of steganography a
 
 To see if an image is not compromised, we can check it's hash to see if it is like the original:
 \begin{minted}{bash}
-      md5sum camilo.jpg
+md5sum camilo.jpg
 \end{minted}
 
 \section{Lecture - 21/10/2025}
@@ -281,8 +281,8 @@ Content taught: Asymmetric Cryptography
 Installing \textbf{gpg}:
 
 \begin{minted}{bash}
-      # being sudo
-      apt update && apt install gnupg
+# being sudo
+apt update && apt install gnupg
 \end{minted}
 
 I send someone my public key, they send me and I decrypt it with my private key. To make sure that someone sent someone, they need to sign someone with their private key, and with their public key, through a keychain, they can be sure that someone encrypted it. \href{https://keys.openpgp.org/}{keys.openpgp.org} is a public keychain. This website generate public keys that can be used by everyone. You cannot have two certificates in the same keychain using the same e-mail.
@@ -290,15 +290,15 @@ I send someone my public key, they send me and I decrypt it with my private key.
 The first step is to add the keyserver to our gnupg installation:
 
 \begin{minted}{bash}
-      mkdir ~/.gnupg
-      touch ~/.gnupg/gpg.conf
-      vim ~/.gnupg/gpg.conf
+mkdir ~/.gnupg
+touch ~/.gnupg/gpg.conf
+vim ~/.gnupg/gpg.conf
 \end{minted}
 
 Inside the file, write the following:
 
 \begin{minted}{bash}
-      keyserver hkps://keys.openpgp.org
+keyserver hkps://keys.openpgp.org
 \end{minted}
 
 The difference between a remote to a local keychain is that the local keychain only has keys I used before, not the ones I did never use.
@@ -306,7 +306,7 @@ The difference between a remote to a local keychain is that the local keychain o
 To encrypt data asymmetrically:
 
 \begin{minted}{bash}
-      gpg --full-generate-key
+gpg --full-generate-key
 \end{minted}
 
 Expected output:
@@ -404,7 +404,7 @@ To see the keys:
 To export your key as text to later upload to the public keychain:
 
 \begin{minted}{bash}
-      gpg --export --armor lellis.m@escolar.ifrn.edu.br > minha_chave.asc
+gpg --export --armor lellis.m@escolar.ifrn.edu.br > minha_chave.asc
 \end{minted}
 
 % TO-DO: Add the last part of the script to this document

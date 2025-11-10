@@ -330,14 +330,14 @@ For the practice example we did in class, we first had to download a
 **docker-compose.yml**:
 
 ``` bash
-      wget http://10.49.10.70/cripto01/docker-compose.yml
+wget http://10.49.10.70/cripto01/docker-compose.yml
 ```
 
 TO-DO: Later, I’ll share the content of the **.yml** here. To run it,
 just execute the following command:
 
 ``` bash
-      docker compose up
+docker compose up
 ```
 
 After running the container, just access
@@ -347,7 +347,7 @@ password of **password**
 To extract the image, just run:
 
 ``` bash
-      steghide extract -sf rk_01.jpg
+steghide extract -sf rk_01.jpg
 ```
 
 The passphrase is "agua". The professor hid an image inside another.
@@ -373,7 +373,7 @@ To see if an image is not compromised, we can check it’s hash to see if
 it is like the original:
 
 ``` bash
-      md5sum camilo.jpg
+md5sum camilo.jpg
 ```
 
 # Lecture - 21/10/2025
@@ -389,8 +389,8 @@ consists of using a pair of keys when encrypting and decrypting data.
 Installing **gpg**:
 
 ``` bash
-      # being sudo
-      apt update && apt install gnupg
+# being sudo
+apt update && apt install gnupg
 ```
 
 I send someone my public key, they send me and I decrypt it with my
@@ -404,15 +404,15 @@ have two certificates in the same keychain using the same e-mail.
 The first step is to add the keyserver to our gnupg installation:
 
 ``` bash
-      mkdir ~/.gnupg
-      touch ~/.gnupg/gpg.conf
-      vim ~/.gnupg/gpg.conf
+mkdir ~/.gnupg
+touch ~/.gnupg/gpg.conf
+vim ~/.gnupg/gpg.conf
 ```
 
 Inside the file, write the following:
 
 ``` bash
-      keyserver hkps://keys.openpgp.org
+keyserver hkps://keys.openpgp.org
 ```
 
 The difference between a remote to a local keychain is that the local
@@ -421,7 +421,7 @@ keychain only has keys I used before, not the ones I did never use.
 To encrypt data asymmetrically:
 
 ``` bash
-      gpg --full-generate-key
+gpg --full-generate-key
 ```
 
 Expected output:
@@ -451,7 +451,7 @@ To see the keys:
 To export your key as text to later upload to the public keychain:
 
 ``` bash
-      gpg --export --armor lellis.m@escolar.ifrn.edu.br > minha_chave.asc
+gpg --export --armor lellis.m@escolar.ifrn.edu.br > minha_chave.asc
 ```
 
 Then we can go to [openpgp](https://keys.openpgp.org/) and upload our
