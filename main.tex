@@ -442,6 +442,47 @@ Content taught: review for practical exam. We took a look into some new commands
 % de-lellis@DESKTOP-G4N0RK4:~/projects/c-cpp/security$ md5sum imagens-hidden/cachorro.jpg
 % 8f3ff94293d5accad5050f0bbb140d1d  imagens-hidden/cachorro.jpg
 
+% -----|-----|-----|-----|-----|-----|-----|-----|-----|-----
+
+\section{Exam - 10/11/2025}
+Content: 50 questions, all objective. Mostly theoretical questions.
+
+% -----|-----|-----|-----|-----|-----|-----|-----|-----|-----
+
+\section{Lecture - 10/11/2025}
+Content taught: Firewalls
+
+\subsection{What is a firewall?}
+A firewall is analog to a closed apartment complex. It is a closed perimeter, people can only come and go from a single way.
+
+\subsection{Can a router be a firewall?}
+Can a router be a firewall? Should a router be a firewall? Should I have a firewall apart from a router? The router can be a firewall. It maybe can be used as a firewall. Not every router should be a firewall. It all depends on context. But firewall as a network component, is basically a router. You can segment the traffic and implement firewall in distinct points. Is like putting two Federal Cars to review traffic from CN to Acari and to SV. It can be used to block content from web for example.
+
+You can put a firewall at the same place as a router. Instead of everything that comes to the router and is routed can be filtered and routed by the firewall. With a firewall, you can block which kind of networks can access resources inside a organization. You can block content. You can take records of access to internal and external resources. It can also be used to lessen the exposition to machines connected to the internal network. The machine can access things from the outside but things from the outside can't access the machine.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\linewidth]{./images/firewall.png}
+\caption{\label{fig:firewall}An example of firewall use.}
+\end{figure}
+
+\subsection{Filtering elements}
+Firewall can be used to control access by IP. Firewall can also be used to control access of ports, making services running locally available to the outside, like databases.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\linewidth]{./images/firewall2.png}
+\caption{\label{fig:firewall2}Example of filtering using IP.}
+\end{figure}
+
+Filtering can be done with fields from a TCP segment. It can also be done at the data link layer. The appliaction layer is also another level available to be used for filtering. Most current filters can be applied to all layers.
+
+\subsection{Type of firewalls}
+Packet Filtering Firewall: traditional firewall. Stateful Inspection Firewall: all current firewalls work with this feature. Only SYN ACK compatible packages are accepted. No fake package goes through. Application Level Gateway: intermediate for application level. Make filtering until the application layer. Made with a proxy. Proxy is not essentially a application firewall. It is a most viable solution to make filtering at the application level. Proxy can analyze best this layer and also do cache. It can deliver things faster to users that want the same thing. However that does not have anything to do with firewalls. It becomes to act like one when you add restriction rules, limiting what can be accessed by machines at that network.
+
+\subsection{Practices}
+Package analysis done through pre-defined rules. Most basic: done through IP address. Decision making: block or discard? At the start, everything that is not prohibited is permitted. Now, what is not expressively permitted, is prohibited. That makes it easier for the firewall to work. It is so many ports to look out, that if you had to look for all that is prohibited wouldn't be smart.
+
 % -----------------------------------------------------------
 % -----|-----|-----|-----|-----|-----|-----|-----|-----|-----
 % -----------------------------------------------------------
